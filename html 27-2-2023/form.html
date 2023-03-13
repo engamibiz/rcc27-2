@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+            padding: 10px;
+            width: 90%;
+            color:blue;
+            background-color: azure;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="username">User Name</label>
+            <input type="text" id="username" placeholder="plz write username here">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="plz write password here">
+
+            <label for="Email">Email</label>
+            <input type="email" id="Email" placeholder="plz write email here">
+
+            <label for="URL">URL</label>
+            <input type="url" id="URL" placeholder="plz write URL here">
+        </fieldset>
+
+        <fieldset>
+            <legend>Another inputs</legend>
+            <label for="date">Date</label>
+            <input type="date" id="date">
+            <label for="time">Time</label>
+            <input type="time" id="time">
+            <label for="color">Color</label>
+            <input type="color" id="color">
+            <label for="file">File</label>
+            <input type="file" id="file">
+        </fieldset>
+
+        <fieldset>
+            <legend>Selectors</legend>
+            <div>
+                <input type="checkbox" id="agree">
+                <label for="agree">Do you accept the agreement</label>
+            </div>
+            <div>
+                <!-- multiple select -->
+                <label>What is your best car</label>
+                <input type="checkbox" id="BMW">
+                <label for="BMW">BMW</label>
+                <input type="checkbox" id="MG">
+                <label for="MG">MG</label>
+                <input type="checkbox" id="KIA">
+                <label for="KIA">KIA</label>
+            </div>
+        <!-- new -->
+
+            <div>
+                <label >Gender</label>
+                <input type="radio" id="Male" name="gender">
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="gender">
+                <label for="Female">Female</label>
+            </div>
+
+            <div>
+                <label >Age</label>
+                <input type="radio" id="Kid" name="age">
+                <label for="Kid">Kid</label>
+                <input type="radio" id="Teenage" name="age">
+                <label for="Teenage">Teenage</label>
+                <input type="radio" id="old" name="age">
+                <label for="old">Old</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>another selectors</legend>
+            <select >
+                <option value="">option1</option>
+                <option value="">option2</option>
+                <option value="">option3</option>
+                <option value="">option4</option>
+            </select>
+
+
+            <select multiple>
+                <option value="">option1</option>
+                <option value="">option2</option>
+                <option value="">option3</option>
+                <option value="">option4</option>
+            </select>
+
+            <textarea name="" id="" cols="30" rows="10" required></textarea>
+
+            <input type="submit">
+            <button type="submit">Save</button>
+            <button type="button">button</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
