@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .traffics{
+            background-color: black;
+            width: 100px;
+            height: 300px;
+            margin: 100px auto;
+            border-radius: 15px;
+            padding-top:1px ;
+        }
+        .traffics > div{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 5px auto;
+            opacity: 0.5;
+        }
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        .traffics > .opacity{
+            opacity: 1;
+        }
+        #counter{
+            position: fixed;
+            left: 100px;
+            top:10px;
+            background-color: black;
+            padding: 10px;
+            color:white;
+            font-size: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="traffics">
+        <div id="red" class="opacity"></div>
+        <div id="yellow" ></div>
+        <div id="green"></div>
+    </div>
+    <div id="counter">5</div>
+    <script>
+        let x = 5
+        let current = 'red'
+        setInterval(function(){
+            x -- 
+            document.getElementById('counter').innerHTML=x
+            if(x == 0){
+                x = 6
+                if(current == 'red'){
+                    current = 'yellow' 
+                    document.getElementById('red').classList.remove('opacity')
+                    document.getElementById('yellow').classList.add('opacity')
+                }else if (current == 'yellow'){
+                    current = 'green' 
+                    document.getElementById('yellow').classList.remove('opacity')
+                    document.getElementById('green').classList.add('opacity')
+                }else{
+                    current = 'red' 
+                    document.getElementById('green').classList.remove('opacity')
+                    document.getElementById('red').classList.add('opacity')
+                }
+            }
+        },1000)
+
+       
+    </script>
+</body>
+</html>

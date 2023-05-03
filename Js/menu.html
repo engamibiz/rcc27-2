@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu{
+            background-color: aqua;
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            right: -300px;
+            top: 0;
+            transition: right 0.5s;
+        }
+        #menu.show{
+            right:0;
+        }
+        #menu a{
+            text-decoration: none;
+            color:#333;
+            border-bottom: 1px solid #333;
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <button onclick="toggleMenu()">Menu</button>
+   <div id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+   </div>
+   <script>
+    function toggleMenu(){
+        document.getElementById('menu').classList.toggle('show')
+    }
+   </script>
+</body>
+</html>

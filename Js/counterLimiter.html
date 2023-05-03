@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="countUp()">Count</button>
+    <p id="output">0</p>
+        <button onclick="countDown()">Count Down</button>
+
+    <p id="down">10</p>
+
+    <script>
+        let x = 0
+        function countUp(){
+            if(x < 10){
+               x ++ 
+               document.getElementById('output').innerHTML=x
+            }
+        }
+        let y = 10
+        function countDown(){
+            if(y > 0){
+               y -- 
+               document.getElementById('down').innerHTML=y
+            }
+        }
+    </script>
+</body>
+</html>

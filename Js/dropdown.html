@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color:#333;
+            text-decoration: none;
+        }
+        .menu{
+            text-align: center;
+        }
+        .menu > a {
+            display: inline-block;
+        }
+
+ 
+        .dropdown{
+            box-shadow: 0 0 5px gray;
+            width: 200px;
+            position: absolute;
+            padding-left: 0;
+            left:0;
+            top:20px;
+            /* display: none; */
+            transform: scale(0);
+            transition: transform 0.5s;
+            transform-origin: top left;
+        }
+        .show{
+            /* display: block; */
+            transform: scale(1);
+        }
+        li{
+            list-style-type:none;
+        }
+        li a{
+            padding: 10px;
+            border-top: 1px solid black;
+            display:block;
+        }
+        .menu > div {
+            display: inline-block;
+            position: relative;
+            padding: 10px;
+        }
+        .menu .active{
+            background-color: black;
+            color: white;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="menu">
+        
+        <a href="">Home</a>
+        <div id="page" onclick="hideMenu()">
+            Page
+            <ul id="drop" class="dropdown">
+                <li><a href="#">Team</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <a href="">Contact</a>
+    </div>
+
+    <script>
+        function hideMenu(){
+            // document.getElementById('drop').style.display='block'
+            
+            let drop = document.getElementById('drop')
+            let page = document.getElementById('page')
+            drop.classList.toggle('show')
+            page.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
